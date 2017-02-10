@@ -8,6 +8,7 @@ ssh into your raspberry pi ([How to config ssh without UTP cable?](http://jperel
 
     sudo apt install npm
     sudo npm install -g domokeeper
+    ln -s /usr/bin/nodejs /usr/bin/node  # debian buggy naming
 
 ## Run
 
