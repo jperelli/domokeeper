@@ -64,9 +64,30 @@ app.get('/plugins/install/', function (req, res) {
   });
 })
 
+app.delete('/plugins/:id', function (req, res) {
+  var child = spawn('npm', ['remove', req.params.id]);
+  var stdout = '';
+  child.stdout.on('data', function(data) {
+    stdout += data;
+  });
+  child.on('close', function(code) {
+    res.json({stdout: stdout, code: code});
+  });
+})
+
+app.get('/plugins/:id/sensor/:sensor', function (req, res) {
+  var plugin = require(req.params.id);
+  res.json(plugin.sensors[req.params.sensor].f());
+})
+
 app.get('/plugins/:id', function (req, res) {
   var plugin = require(req.params.id);
   res.json(plugin);
+})
+
+app.post('/plugins/:id/action/:action', function (req, res) {
+  var plugin = require(req.params.id);
+  res.json(plugin.actions[req.params.action].f());
 })
 
 app.listen(PORT, function () {
