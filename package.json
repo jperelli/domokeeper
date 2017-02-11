@@ -1,6 +1,6 @@
 {
   "name": "domokeeper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "domokeeper server: a pluggable domotic control server for Raspberry Pi 2/3",
   "main": "index.js",
   "bin": {
