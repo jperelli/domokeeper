@@ -22,6 +22,14 @@ Get help on man page
 
 This is work in progress, it is not yet done.
 
+## How to add functionality
+
+Make a plugin.
+
+[There is a skeleton plugin to be forked/copied as a starting point here](https://github.com/jperelli/domokeeper-plugin-skeleton)
+
+See the readme over there to guide you making one in no more than 5 minutes. It's easy, so go ahead and do it!
+
 # Contributors
 
  - Julian Perelli
